@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+
+.left { text-align: left ;}
+.right { text-align: right; }
+.centered { text-align: center; }
+
+.padded { padding: 5%; }
+.padded-1 {padding: 1%;}
+.no-padding { padding: 0; }
+
+.bg-image {
+background-size: cover;
+background-position: centre;
+min-height: 50vh;
+}
+.border-bottom {
+border-bottom: 1px solid grey;
+}
+
+/* Universal styles */
+
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.profile {
+  border-radius: 100%;
+  max-width: 50%;
+}
+/*
+-webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 /*
+filter: grayscale(100%);
+*/
+
+body {
+  font-family: 'Montserrat';
+  color: rgb(60,60,65);
+  line-height: 1.5rem;
+  /* font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 2.1em; */
+}
+
+section {
+  padding: 2rem;
+}
+
+/*typography section */
+
+h2, h3, h4, h5, h5, p {
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: .2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+a:hover,
+.menu a:hover  {
+  color: teal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  display: inline-block;
+     border: 1.5px solid rgb(60,60,65);
+     color: inherit;
+     font-weight: bold;
+     position: center;
+     -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+#typed-strings {
+  display: none;
+}
+
+.banner,
+.header-banner  {
+  background-image: url("/images/placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  background-attachment:fixed;
+}
+
+.header-banner {
+  background-image: url("/images/placeholder.jpg");
+  padding: 0;
+  color: white;
+}
+
+.overlay {
+  background-color:rgba(0,0,0,0.2);
+  min-height: 70vh;
+}
+
+.header-banner h3 {
+    font-size: 3rem;
+    line-height:1;
+    margin-bottom:0.5rem;
+}
+.header-banner .button {
+    border-color: white;
+    margin-top:1rem;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: centre;
+  min-height: 50 vh;
+}
+
+.bg-placeholder {
+  background-image: url('/images/placeholder.jpg')
+}
+
+.bg-1 {
+  background-image: url('/images/food1.jpg');
+}
+.bg-2 {
+  background-image: url('/images/food2.jpg');
+}
+.bg-3 {
+  background-image: url('/images/food3.jpg');
+}
+
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 115px;
+}
+
+.logo .fas {
+  font-size: 2rem;
+}
+
+/* hamburger menu section */
+.active {
+
+}
+.hamburger {
+ position: absolute;
+ right: 1rem;
+ top: 1rem;
+ z-index: 3;
+}
+
+.menu {
+   background-color: white;
+   transition: 2s;
+   position: absolute;
+   top: 0;
+   left: auto;
+   right: 0;
+   bottom: 0;
+  padding: 10%;
+}
+
+.menu a {
+  padding: 1rem;
+  display: block;
+  color: inherit;
+}
+.hidden {
+  right: -50rem;}
+
+.mobile-nav a {
+ color: rgb(60,60,65);
+ padding: 1rem;
+ display: block;
+ text-decoration: none;
+}
+/* end of hamburger menu section */
+
+.quote {
+  border-top: 2px solid rgb(240,240,240);
+  border-bottom: 2px solid rgb(240,240,240);
+  padding: 2rem;
+}
+
+.quote p {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  line-height: 1.3em;
+}
+
+
+.socials {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.fab{
+  font size: 2.5rem;
+  padding: 0.5rem;
+  color: #222;
+  }
+
+.footer{
+  padding:inherit;
+    background-color: white;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-bottom: 1px solid grey;
+    resize: none;
+}
+
+
+/* consultation*/
+
+.consultation {
+  padding: 5%;
+
+}
+.consultation > div {
+  border: 1px solid grey;
+  padding: 5%;
+}
+
+/* -----  Testimonials  -----  */
+
+.customer {
+  font-family: "Josefin Sans";
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
