@@ -1,13 +1,8 @@
 ---
 layout: default
+pic: /images/food3.jpg
 ---
 
-jflkdsg
+jflkdsgsgdfgsdgd
 
-kjnlkhn
-
-n
-n
-n
-n
-n
+kjnlkhnhdsfhlifhl

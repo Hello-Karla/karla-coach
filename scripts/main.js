@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('.hamburger').click(function(){
-    $(this).toggleClass('active');
-    $('.menu').toggleClass('hidden')
-    });
+  $(".burger-button").click(function(){
+    $(".burger-button").toggleClass("active");
+    $(".burger-menu").toggleClass("active");
+  });
 
     var typed = new Typed('#typed', {
 	stringsElement: '#typed-strings',

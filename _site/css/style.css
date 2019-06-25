@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Classes */
+
+.left { text-align: left ;}
+.right { text-align: right; }
+.centered { text-align: center; }
+.dark-bg {background-color: darkgrey;}
+.light-bg {background-color: white;}
+/* .padded { padding: 5%; }
+.padded-1 {padding: 1%;}
+.no-padding { padding: 0; } */
+
+.bg-image {
+background-size: cover;
+background-position: centre;
+min-height: 50vh;
+}
+.border-bottom {
+border-bottom: 1px solid grey;
+}
+
+/* Universal styles */
+
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.profile {
+  border-radius: 100%;
+  max-width: 50%;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,.2), 0 10px 10px -5px rgba(0,0,0,.2);
+}
+/*
+-webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 /*
+filter: grayscale(100%);
+*/
+
+body {
+  font-family: 'Montserrat';
+  color: rgb(60,60,65);
+  line-height: 1.5rem;
+  /* font-size: 15px;
+  letter-spacing: 0.1em;
+  line-height: 2.1em; */
+
+}
+
+.content-section {
+  max-width:1000px;
+  padding: 4rem 0;
+}
+
+
+section {
+  padding: 0;
+  margin: 0 auto;
+}
+
+/*typography section */
+
+h2, h3, h4, h5, h5, p {
+  margin-bottom: 0.8rem;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  letter-spacing: .2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+.padded {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+.padded-15 {
+  padding:15%;
+}
+
+a:hover,
+.menu a:hover  {
+  color: teal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  padding: 1rem 1.5rem;
+  display: inline-block;
+     border: 1.5px solid rgb(60,60,65);
+     color: inherit;
+     font-weight: bold;
+     position: center;
+     -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+#typed-strings {
+  display: none;
+}
+
+.banner,
+.header-banner  {
+  background-image: url("/images/placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  background-attachment:fixed;
+}
+
+.header-banner {
+  background-image: url("/images/placeholder.jpg");
+  padding: 0;
+  color: white;
+}
+
+.overlay {
+  background-color:rgba(0,0,0,0.2);
+  min-height: 70vh;
+}
+
+.header-banner h3 {
+    font-size: 3rem;
+    line-height:1;
+    margin-bottom:0.5rem;
+}
+.header-banner .button {
+    border-color: white;
+    margin-top:1rem;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: centre;
+  min-height: 50 vh;
+}
+
+.bg-placeholder {
+  background-image: url('/images/placeholder.jpg')
+}
+
+.bg-1 {
+  background-image: url('/images/food1.jpg');
+}
+.bg-2 {
+  background-image: url('/images/food2.jpg');
+}
+.bg-3 {
+  background-image: url('/images/food3.jpg');
+}
+
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 115px;
+}
+
+.logo .fas {
+  font-size: 2rem;
+}
+
+.price {
+  fontsize:
+}
+/* hamburger menu section */
+.active {
+
+}
+
+/* this is where you style the button if you want to add more space between the spans than add padding to this div but make sure you also add it to the top and bottom active classes on there top/bottom or else your cross wont line up*/
+
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 9;
+  padding: 8px;
+}
+/*this is where you can chand the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid black;
+  background-color: black;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: green;
+  background-color:#383;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+/*   transform: rotateZ(270deg); */
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+    display: flex;
+    position: fixed;
+    top: -100vh;
+    left:0;
+    right: 0;
+    bottom: 100vh;
+    background-color: #f9f9f9;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 8;
+  transition:1s;
+    align-content:space-around;
+  justify-content:space-around;
+  flex-direction:column;
+}
+.burger-menu.active{
+  top:0;
+  bottom:0;
+}
+.burger-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  color: #C3BFBC;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}
+
+
+
+/* .menu {
+   background-color: white;
+   transition: 2s;
+   position: absolute;
+   top: 0;
+   left: auto;
+   right: 0;
+   bottom: 0;
+  padding: 10%;
+}
+
+.menu a {
+  padding: 1rem;
+  display: block;
+  color: inherit;
+}
+.hidden {
+  display: none;
+}
+
+.mobile-nav a {
+ color: rgb(60,60,65);
+ padding: 1rem;
+ display: block;
+ text-decoration: none;
+}
+/* end of hamburger menu section */
+
+.quote {
+  border-top: 2px solid rgb(240,240,240);
+  border-bottom: 2px solid rgb(240,240,240);
+  padding: 2rem;
+}
+
+.quote p {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  letter-spacing: 0.3em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+
+.socials {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.fab{
+  font size: 2.5rem;
+  padding: 0.5rem;
+  color: #222;
+  }
+
+.footer{
+  padding:inherit;
+    background-color: white;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 2%;
+    border: none;
+    border-bottom: 1px solid grey;
+    resize: none;
+    font-size: 0.9rem;
+}
+
+.footer-form{
+  max-width: 500px;
+padding: 1.5rem;
+}
+
+
+/* consultation*/
+
+.consultation {
+  padding: 5%;
+
+}
+
+.consultation > div {
+  border: 1px solid grey;
+  padding: 5%;
+  box-shadow: 0 10px 15px 5px darkgrey;
+}
+
+/* -----  Testimonials  -----  */
+
+.customer {
+  font-family: "Josefin Sans";
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+
+}

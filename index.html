@@ -1,5 +1,19 @@
 ---
 layout: default
+reviews:
+- name: Laurie
+  photo: laurie.jpg
+  text: Connecting with Karla has been an inspiring experience! Her enthusiasm for health and wellness, nutrition and life coaching is contagious. I look forward to every coaching call with her and I feel motivated to stay focused on my goals.
+  stars: ★ ★ ★ ★ ★
+- name: Karine
+  photo: karine.jpg
+  text: Karla has practical day to day advice for you for specific conditions that benefit from nutrition and lifestyle changes! I encourage you to get to know this dynamic and very knowledgable coach.
+  stars: ★ ★ ★ ★ ★
+- name: Maria
+  photo: maria.jpg
+  text: Karla makes health fun, and I alway enjoy our chats. She is energetic, easy to talk to, and has so much knowledge to share. Thanks to her support I have been able to shift my mindset and develop a better mind-body connection.
+  stars: ★ ★ ★ ★ ★
+
 ---
 <section class="header-banner">
   <div class="grid-middle overlay">
@@ -18,7 +32,7 @@ layout: default
 </section>
 
 <!--this is my intro banner section -->
-<section class="padded">
+<section class="content-section">
   <div class="quote">
     <p> "Let food be thy medicine and medicine be thy food" 〜 Hippocrates </p>
   </div>
@@ -30,26 +44,28 @@ layout: default
 </section>
 
 <!--this is my heading + text columns section -->
-<section class="grid">
-  <div class="col-3_sm-12 padded">
-    <h2> What I do </h2>
-  </div>
-  <div class="col-9_sm-12 padded">
-    <p> My passion is helping people discover the life-changing power of real food with conscious cooking and living. Highlighting the importance of body-mind-spirit connection and showing how every aspect of what we do, say and fuel our body with is
-      either helping us or hindering us. </p>
-  </div>
+<section class="content-section">
+  <div class="grid">
+    <div class="col-3_sm-12 padded">
+      <h2> What I do </h2>
+    </div>
+    <div class="col-9_sm-12 padded">
+      <p> My passion is helping people discover the life-changing power of real food with conscious cooking and living. Highlighting the importance of body-mind-spirit connection and showing how every aspect of what we do, say and fuel our body with is
+        either helping us or hindering us. </p>
+    </div>
 
-  <div class="col-3_sm-12 padded">
-    <h2> What I offer </h2>
-  </div>
+    <div class="col-3_sm-12 padded">
+      <h2> What I offer </h2>
+    </div>
 
-  <div class="col-8_sm-12 padded">
-    <p>
-      As a fully qualified and accredited health coach I'm committed to helping my clients find a way that motivates them toward better health. I offer in person coaching sessions as well as an online consultations to help you take control of your
-      health no matter where in the world you're.
-    </p>
-  </div>
+    <div class="col-8_sm-12 padded">
+      <p>
+        As a fully qualified and accredited health coach I'm committed to helping my clients find a way that motivates them toward better health. I offer in person coaching sessions as well as an online consultations to help you take control of your
+        health no matter where in the world you're.
+      </p>
+    </div>
 
+  </div>
 </section>
 
 <!-- this is my picture section -->
@@ -58,38 +74,29 @@ layout: default
 </section>
 
 <!-- this is my reviews section -->
-<section class="light-bg centered padded">
+<section class="light-bg centered content-section">
   <h2> What others say </h2>
   <div class="grid-equalHeight padded-1">
 
+    {% for review in page.reviews %}
     <!-- column one  -->
     <div class="col-4_sm-12 padded">
       <div class="reviews padded-1">
-        <img src="images/laurie.jpg" class="profile">
-        <p class="customer"> Laurie </p>
-        <p> Connecting with Karla has been an inspiring experience! Her enthusiasm for health and wellness, nutrition and life coaching is contagious. I look forward to every coaching call with her and I feel motivated to stay focused on my goals.
+        <img src="/images/{{review.photo}}" class="profile">
+        <p class="customer">
+          {{review.name}}
         </p>
-        <p> ★ ★ ★ ★ ★ </p>
+        <p>
+          {{review.text}}
+        </p>
+        <p>
+           {{review.stars}}
+       </p>
       </div>
     </div>
+    {% endfor %}
     <!-- column two   -->
-    <div class="col-4_sm-12 padded">
-      <div class="reviews padded-1">
-        <img src="images/karine.jpg" class="profile">
-        <p class="customer"> Karine </p>
-        <p> Karla has practical day to day advice for you for specific conditions that benefit from nutrition and lifestyle changes! I encourage you to get to know this dynamic and very knowledgable coach. </p>
-        <p> ★ ★ ★ ★ ★ </p>
-      </div>
-    </div>
 
-    <!-- column three  -->
-    <div class="col-4_sm-12 padded">
-      <div class="review padded-1">
-        <img src="images/maria.jpg" class="profile">
-        <p class="customer"> Maria </p>
-        <p> Karla makes health fun, and I alway enjoy our chats. She is energetic, easy to talk to, and has so much knowledge to share. Thanks to her support I have been able to shift my mindset and develop a better mind-body connection. </p>
-        <p> ★ ★ ★ ★ ★ </p>
-      </div>
 </section>
 
 <!-- this is my picture section -->
@@ -98,7 +105,7 @@ layout: default
 </section>
 
 <!-- this is my 2nd quote section -->
-<section class="padded">
+<section class="content-section">
   <div class="quote">
     <p> What do you want to be healthy for? Your Why helps us to achieve your desired results together. </p>
   </div>
@@ -110,22 +117,23 @@ layout: default
 
 <!-- this is a Contact Me Plug-in & Picture section -->
 
-<section class="grid">
-  <div class="col-6">
+<section class="">
+  <div class="grid">
+    <div class="col-6 grid-right">
 
-    <form action="https://formspree.io/karleyandthyme@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="name">
-      <input type="email" name="_replyto" placeholder="email">
-      <input type="text" name="subject" placeholder="subject">
-      <textarea name="message" rows="8" cols="80" placeholder="message"></textarea>
-      <input class="button" type="submit" value="Send">
+      <form class="footer-form"> <action="https://formspree.io/karleyandthyme@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="name">
+        <input type="email" name="_replyto" placeholder="email">
+        <input type="text" name="subject" placeholder="subject">
+        <textarea name="message" rows="8" cols="80" placeholder="message"></textarea>
+        <input class="button" type="submit" value="Send">
 
-    </form>
-    <!-- plug-in contact me form -->
+      </form>
+      <!-- plug-in contact me form -->
+    </div>
+    <div class="col-6 bg-image bg-3">
+    </div>
   </div>
-  <div class="col-6 bg-image bg-3">
-  </div>
-
 </section>
 
 <!--This is a footer with a social icons -->
