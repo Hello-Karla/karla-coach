@@ -9,7 +9,7 @@ layout: default
 {% for post in site.posts %}
 <div class="col-4 centered">
 <a href="{{post.url}}">
-  <div class="background-image" style="background-image:url('{{post.pic}}')"> </div>
+  <div class="background-image" style="background-image:url('{{post.pic_path}}')"> </div>
   <h4> {{post.title}} </h4>
   <h3> {{ post.date | date: "%-d %B %Y"}}  </h3>
   <p class="button"> Read more </p>

@@ -1,6 +1,6 @@
 ---
 layout: default
-pic: /images/food3.jpg
+pic_path: /images/food3.jpg
 ---
 
 jflkdsgsgdfgsdgd
