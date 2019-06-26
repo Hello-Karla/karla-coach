@@ -1,6 +1,6 @@
 ---
 layout: default
-pic_path: /images/food3.jpg
+pic_path: /uploads/twinsfisch-uspjzzywxo4-unsplash.jpg
 ---
 
 jflkdsgsgdfgsdgd
