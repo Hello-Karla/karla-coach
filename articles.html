@@ -1,17 +1,23 @@
 ---
 layout: default
 ---
-
-<h2> </h2>
+<section class="padded-15">
+<h2> Incredibly articuled articles </h2>
 <div class="grid">
 
+
 {% for post in site.posts %}
-<div class="col-4">
+<div class="col-4 centered">
 <a href="{{post.url}}">
-  <img src="{{post.pic}}" alt="">
-<h3> {{post.title}} </h3>
+  <div class="background-image" style="background-image:url('{{post.pic}}')"> </div>
+  <h4> {{post.title}} </h4>
+  <h3> {{ post.date | date: "%-d %B %Y"}}  </h3>
+  <p class="button"> Read more </p>
+
 </a>
 </div>
 
 {% endfor %}
 </div>
+
+</section>
