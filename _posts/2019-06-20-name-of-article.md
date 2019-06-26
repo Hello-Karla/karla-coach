@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: articles
 pic: /images/food3.jpg
 ---
 
