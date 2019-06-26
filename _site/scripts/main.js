@@ -4,10 +4,5 @@ $(document).ready(function(){
     $(".burger-menu").toggleClass("active");
   });
 
-    var typed = new Typed('#typed', {
-	stringsElement: '#typed-strings',
-	loop: true,
-   loopCount: Infinity,
-	typeSpeed: 100
-});
+
 });
